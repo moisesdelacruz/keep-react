@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "title": "Demi Lovato",
+      "description": "Within a few short years, Demi Lovato went from a Disney starlet to a pop star with many hit singles to her credit, a judge position on the U.S. version of Simon Cowell's popular talent search show The X Factor, and a spokesperson for mental-health issues. Born in 1992 in Dallas, Texas, she was raised in a household that included her mother (a former Dallas Cowboys Cheerleader) and her two sisters, the youngest of whom launched her own acting career in 2008. Demi started out as a child actress, starring as a cast regular on Barney and Friends before finding her way onto the Disney Channel with a brief role in As the Bell Rings."
+    },
+    {
+      "id": "2",
+      "title": "Christina Aguilera",
+      "description": "American pop singer Christina Aguilera spun a late-'90s breakthrough into an evolving and genre-hopping career that focused on uplifting ballads and sexually liberated anthems delivered with her iconic voice."
+    },
+    {
+      "id": "3",
+      "title": "Adele",
+      "description": "When the U.K. press began dubbing Adele 'the next Amy Winehouse' in late 2007, the hype didn't touch upon the singer/songwriter influence found in the Londoner's music."
+    }
+  ]
+}
