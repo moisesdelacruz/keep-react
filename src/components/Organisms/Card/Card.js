@@ -8,16 +8,20 @@ import styles from './CardStyles.sass'
 
 class Card extends Component {
   static propTypes = {
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
+    deleteAction: PropTypes.func.isRequired
   }
 
   static defaultProps = {
     className: ''
   }
 
-  componentDidMount() {}
+  deleteNote = () => {
+    this.props.deleteAction(this.props.id)
+  }
 
   render() {
     const { className } = this.props
@@ -34,7 +38,7 @@ class Card extends Component {
           <button type="button" id="edit">
             <Icon name="pencil" style={{ color: 'orange' }} />
           </button>
-          <button type="button" id="delete">
+          <button type="button" id="delete" onClick={this.deleteNote}>
             <Icon name="bin" style={{ color: 'red' }} />
           </button>
         </Row>

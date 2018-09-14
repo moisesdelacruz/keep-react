@@ -33,7 +33,7 @@ class Home extends Component {
         <Col style={{ overflowY: 'auto', maxHeight: '400px', flex: '1 1 0%' }}>
           {
             this.props.data.reverse().map((item) => {
-              return <Card key={item.id} title={item.title} description={item.description} />
+              return <Card key={item.id} {...item} deleteAction={this.props.actions.removeNote} />
             })
           }
         </Col>
