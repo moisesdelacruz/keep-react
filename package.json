@@ -1,0 +1,71 @@
+{
+  "name": "keep",
+  "version": "1.0.0",
+  "description": "first project with react and redux",
+  "main": "webpack.config.js",
+  "scripts": {
+    "precommit": "npm run lint",
+    "start": "webpack-dev-server --mode development --progress",
+    "build:dist": "better-npm-run build:dist",
+    "build:prod": "better-npm-run build:prod",
+    "lint": "eslint src"
+  },
+  "betterScripts": {
+    "build:dist": "npm run lint && webpack --mode production --progress --colors",
+    "build:prod": {
+      "command": "npm run lint && webpack --mode production --progress --colors",
+      "env": {
+        "NOD_ENV": "production"
+      }
+    }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^9.0.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "better-npm-run": "^0.1.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-loader": "^2.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^0.14.3",
+    "mini-css-extract-plugin": "^0.4.2",
+    "node-sass": "^4.9.3",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "react-hot-loader": "^4.3.6",
+    "redbox-react": "^1.6.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.18.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "connected-react-router": "^4.4.1",
+    "history": "^4.7.2",
+    "install": "^0.12.1",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-input-autosize": "^2.2.1",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "author": "Moises De La Cruz <moisesdelacruz.dev@gmail.com>",
+  "license": "MIT"
+}
