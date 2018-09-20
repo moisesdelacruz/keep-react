@@ -1,7 +1,7 @@
 import { cloneDeep } from 'lodash';
 
 import { SEARCH_NOTES, ADD_NOTE, REMOVE_NOTE } from 'src/store/actions'
-// import { setToState } from 'src/utils'
+import { setToState } from 'src/utils'
 import data from 'src/store/api.json'
 
 const initialState = {
@@ -12,12 +12,16 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SEARCH_NOTES: {
-      return state
+      const nextState = cloneDeep(state)
+      return nextState
     }
     case ADD_NOTE: {
-      const nextState = cloneDeep(state)
-      const data = nextState.data.data.concat({ ...action.payload.newNote })
-      return { data: { data } }
+      return setToState(state, {
+        'data.data': [
+          ...state.data.data,
+          action.payload.newNote
+        ]
+      })
     }
     case REMOVE_NOTE: {
       const toDelete = new Set([action.payload.id])
